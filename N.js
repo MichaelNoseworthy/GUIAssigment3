@@ -57,19 +57,19 @@ $(document).ready(function() {
 });
 function addquests()
 {
-	var addquests = '<div><input type="text" name="mytext[]"/><a href="#" class="remove_field">Remove</a></div>';
+	var addquests;
 	if (x  < 6)
 	{
 	if (x == 1)
 	addquests = '<div id="quest1">Quest 1</div>';
 	if (x == 2)
-	addquests = '<div id="quest2">Quest 2';
+	addquests = '<div id="quest2">Quest 2</div>';
 	if (x == 3)
-	addquests = '<div id="quest3">Quest 3';
+	addquests = '<div id="quest3">Quest 3</div>';
 	if (x == 4)
-	addquests = '<div id="quest4">Quest 4';
+	addquests = '<div id="quest4">Quest 4</div>';
 	if (x == 5)
-	addquests = '<div id="quest5">Quest 5';
+	addquests = '<div id="quest5">Quest 5</div>';
 	
 	return addquests;
 	}
