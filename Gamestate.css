@@ -1,13 +1,149 @@
 body {
     background-color: beige;
 }
+div
+{
+	border: none;
+}
 
-canvas
+.link-button-wrapper {
+    width: 800px;
+    height: 600px;
+    box-shadow: inset 0px 1px 0px 0px #ffffff;
+    border-radius: 4px;
+    background-color: #097BC0;
+    box-shadow: 0px 2px 4px gray;
+    display: block;
+    border:1px solid #094BC0;
+	margin-left: auto;
+    margin-right: auto;
+}
+.link-button-wrapper > a {
+    display: inline-table;
+    cursor: pointer;
+    text-decoration: none;
+    height: 100%;
+    width:100%;
+}
+.link-button-wrapper > a > h1 {
+    margin: 0 auto;
+    display: table-cell;
+    vertical-align: middle;
+    color: #f7f8f8;
+    font-size: 18px;
+    font-family: cabinregular;
+    text-align: center;
+}
+
+.health-bar {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 200px;
+  height: 20px;
+  padding: 5px;
+  background: #ddd;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  position: center;
+}
+.bar {
+  background: #c54;
+  width: 100%;
+  height: 10px;
+  position: center;
+  
+  transition: width .5s linear;
+}
+
+.hit {
+  background: rgba(255,255,255,0.6);
+  position: center;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 0px;
+  
+  transition: width .5s linear;
+}
+
+#race
+{
+	width: 100px;
+    height: 300px;
+	top: 60px;
+	left: 200px;
+	font-size: 15px;
+	flex: 0 0 20%;
+}
+#class
+{
+	left: 10px;
+	width: 100px;
+    height: 300px;
+	top: 60px;
+	left: 200px;
+	font-size: 15px;
+flex: 0 0 15%;
+}
+#innerbox
+{
+	width: 100px;
+    height: 100px;
+	border: solid;
+}
+#topbox
+{
+	width: 800px;
+    height: 130px;
+}
+#bottombox
+{
+	width: 800px;
+    height: 130px;
+}
+#wrapper {
+  display: flex;
+}
+#left {
+  flex: 0 0 65%;
+}
+#right {
+  flex: 1;
+}
+#buttondiv
+{
+	position: center;
+}
+#rightside
+{
+	width: 300px;
+    height: 350px;
+	flex: 0 0 15%;
+}
+#middle
+{
+	width: 200px;
+    height: 350px;
+
+}
+#infobox
+{
+	width: 200px;
+    height: 150px;
+	border: solid;
+}
+#middlebox
 {
 	position: relative;
-    width: 1280px;
-    height: 720px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #094ff7;
+	left: 10px;
+	width: 150px;
+    height: 150px;
+	border: solid;
+}
+#gender
+{
+position: relative;
+	left: 50px;
 }
