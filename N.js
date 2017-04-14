@@ -141,6 +141,7 @@ window.onload=function(){
  map.style.background='#000 url('+MAP+') no-repeat 0 0';
  map.style.width='150px';
  map.style.height='150px';
+ map.style.borderRadius='50%';
 
 document.body.appendChild(img);
 document.getElementById("minimap").appendChild(map);

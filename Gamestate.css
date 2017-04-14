@@ -254,6 +254,9 @@ flex: 0 0 15%;
 
 	border: none;
 }
+.circleBase {
+    border-radius: 50%;
+}
 #hotbar
 {
 	position: relative;
