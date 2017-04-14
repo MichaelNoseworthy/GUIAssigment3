@@ -249,10 +249,10 @@ flex: 0 0 15%;
 #enemy
 {
 	position: relative;
-	width: 100px;
+	width: 200px;
     height: 20px;
 
-	border: none;
+	border: solid;
 }
 .circleBase {
     border-radius: 50%;
@@ -288,4 +288,11 @@ position: relative;
 	position: relative;
 	left: 30px;
 	top: 50px;
+}
+#oxygen
+{
+	position: relative;
+	width: 200px;
+	left: 20px;
+	border: solid;
 }
