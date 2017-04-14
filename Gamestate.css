@@ -91,7 +91,7 @@ flex: 0 0 15%;
 {
 	width: 100px;
     height: 100px;
-	border: solid;
+	border: none;
 }
 #midwrapper
 {
@@ -101,20 +101,20 @@ flex: 0 0 15%;
 {
 	width: 50px;
     height: 50px;
-	border: solid;
+	border: none;
 	flex: 0 0 50%;
 }
 #midleft
 {
 	width: 50px;
     height: 50px;
-	border: solid;
+	border: none;
 }
 #QuestTracking
 {
 	width: 100px;
     height: 100px;
-	border: solid;
+	border: none;
 }
 #Quests
 {
@@ -142,13 +142,13 @@ flex: 0 0 15%;
 {
 	width: 400px;
     height: 130px;
-	border: solid;
+	border: none;
 }
 #bottombox2
 {
 	width: 400px;
     height: 130px;
-	border: solid;
+	border: none;
 }
 #wrapper {
   display: flex;
@@ -187,10 +187,70 @@ flex: 0 0 15%;
 	left: 10px;
 	width: 200px;
     height: 150px;
-	border: solid;
+	border: none;
+}
+#mapflex
+{
+	display: flex;
+}
+#minimap
+{
+	position: relative;
+	width: 100px;
+    height: 100px;
+	left: 130px;
+	bottom: 60px;
+	border: none;
+}
+#ammo
+{
+	position: relative;
+	width: 100px;
+    height: 10px;
+	border: none;
+	flex: 0 0 15%;
+}
+#ammoflex
+{
+	display:flex;
+}
+#enemy
+{
+	position: relative;
+	width: 100px;
+    height: 20px;
+
+	border: none;
+}
+#hotbar
+{
+	position: relative;
+	width: 200px;
+    height: 40px;
+
+	border: none;
+}
+#enhot
+{
+	position: relative;
+    height: 10px;
 }
 #gender
 {
 position: relative;
 	left: 50px;
+}
+#middlewrapper
+{
+	display:flex;
+}
+#middleflex
+{
+	flex: 0 0 15%;
+}
+#image
+{
+	position: relative;
+	left: 50px;
+	top: 50px;
 }
