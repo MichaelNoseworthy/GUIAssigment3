@@ -1,10 +1,7 @@
 //Mike
-var questsHidden = false;
-function hideQuests()
-{
-	
-
-}
+var questsHidden = true;
+var hotbarHidden = true;
+var minimapHidden = true;
 
 //ammo
 var ammo;
@@ -38,7 +35,9 @@ $(document).ready(function() {
     var wrapper         = $(".input_fields_wrap"); //Fields wrapper
     var add_button      = $(".add_field_button"); //Add button ID
 	var remove_button   = $(".remove_field_button"); //Remove button ID
-	var hide_button     = $(".hide_field_button");
+	var hide_button     = $(".hide_field_button"); //Hides the quests
+	var hide_hotbar_button = $(".hide_hotbar_button"); //Hides the hotbar
+	var minimap_toggle_button = $(".minimap_toggle_button"); //Hides the minimap
     
     
     $(add_button).click(function(e){ //on add input button click
@@ -63,6 +62,38 @@ $(document).ready(function() {
 		questsHidden = false;
 	}
 		});
+		
+//minimap
+		$(minimap_toggle_button).click(function(e){ //on add input button click
+        e.preventDefault();
+	if (minimapHidden == false)
+	{
+		document.getElementById("minimap").removeAttribute("hidden");
+		minimapHidden = true;
+	}
+	else if (minimapHidden == true)
+	{
+		document.getElementById("minimap").setAttribute("hidden", "true");
+		minimapHidden = false;
+	}
+		});
+		
+//hotbar
+		$(hide_hotbar_button).click(function(e){ //on add input button click
+        e.preventDefault();
+	if (hotbarHidden == false)
+	{
+		document.getElementById("hotbar").removeAttribute("hidden");
+		hotbarHidden = true;
+	}
+	else if (hotbarHidden == true)
+	{
+		document.getElementById("hotbar").setAttribute("hidden", "true");
+		hotbarHidden = false;
+	}
+		});
+		
+		//remove quests
 	$(remove_button).click(function(e){ //on add input button click
         e.preventDefault();
         if(x == 1){ //max input box allowed
@@ -162,12 +193,16 @@ function onKeyDown(event)
 {
     switch(event.keyCode)
     {
-        case 27: // tab key
+        case 27: // TAB Key
 			window.location.href = "GameState 07 - Game Options.html"
 				break;
-        case 9: // a
+        case 9: // ESC Key
            window.location.href = "GameState 02 - Game Menu.html"
             	break;
+		case 72: // H Key
+           
+            	break;
+		
     }
 }
 //Mike End
