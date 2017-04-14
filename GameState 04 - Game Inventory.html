@@ -19,71 +19,149 @@ body {
 	transform: rotate(270deg);
 	-moz-transform: rotate(270deg); /*do same for other browsers if required*/
 }
-
+#race
+{
+	width: 100px;
+    height: 300px;
+	top: 60px;
+	left: 200px;
+	font-size: 15px;
+	flex: 0 0 20%;
+}
+#class
+{
+	left: 10px;
+	width: 100px;
+    height: 300px;
+	top: 60px;
+	left: 200px;
+	font-size: 15px;
+flex: 0 0 15%;
+}
+#innerbox
+{
+	width: 100px;
+    height: 100px;
+	border: none;
+}
+#innerbox2
+{
+	width: 100px;
+    height: 100px;
+	border: solid;
+}
+#innerbox3
+{
+	width: 100px;
+    height: 100px;
+	border: none;
+}
+#topbox
+{
+	width: 800px;
+    height: 100px;
+}
+#bottombox
+{
+	width: 800px;
+    height: 100px;
+}
+#wrapper {
+  display: flex;
+}
 #left {
-  float: left;
-  width: 20%;
-  overflow: hidden;
+  flex: 0 0 65%;
 }
-
 #right {
-  overflow: hidden;
+  flex: 1;
 }
-.box1
+#buttondiv
+{
+	position: center;
+}
+#rightside
+{
+	width: 300px;
+    height: 350px;
+	flex: 0 0 15%;
+}
+#middle
 {
 	width: 200px;
-	height: 200px;
-	background: white;
-	position: center;
-	left: 0;
+    height: 350px;
+
 }
-.box2
+#infobox
 {
 	width: 200px;
-	height: 100px;
-	background: blue;
-	position: center;
-	left: 0;
+    height: 150px;
+	border: solid;
 }
-.box3
+#middlebox
 {
-	width: 400px;
-	height: 200px;
-	background: white;
-	position: center;
-	left: 0;
+	position: relative;
+	left: 10px;
+	width: 150px;
+    height: 150px;
+	border: solid;
 }
-#MMtitle
+#gender
 {
-	position: center;
-	text-align: center;
+position: relative;
+	left: 50px;
 }
-#button1
+.link-button-wrapper
 {
-
+	width: 800px;
+    height: 600px;
 }
-#button2
-{
-
-}
-#button3
-{
-
-}
-#button4
-{
-
-}
-p
-{
-
-}
-
 </style>
 
 <body>
 
+	<div class="link-button-wrapper">
+<div id="topbox"></div>
+<div id="wrapper">
+<div id="race">
+<div id="innerbox"></div>
+</div>
+<div id="class">
+<div id="innerbox2">Character</div>
+</div>
+<div id="middle">
+
+<div id="middlebox"></div>
+</div>
+
+</div>
+
+<div id="topbox"></div>
+<div id="wrapper">
+<div id="race">
+<div id="innerbox"></div>
+</div>
+<div id="class">
+<div id="innerbox3">Inventory</div>
+</div>
+<div id="middle">
+
+
+<div id="middlebox"><input id="volume" type="range" class="vranger" min="0" max="100" value="100" onchange="showValueVolume(this.value)"/></div>
+</div>
+
+</div>
+
+<button id="button4" class="buttonType" onclick="window.location.href='GameState 01 - Game State.html'">Resume Game</button>
+	</div>
+	</div>
+</div>
+
+
+<!--
 <div class="link-button-wrapper">
+<div id="flex">
+<div id="leftbox"></div>
+
 
 <div id="MMtitle">
 <p>Inventory</p>
@@ -118,9 +196,9 @@ p
 </div>
 
 </div>
+</div>
 
-
-
+-->
 </body>
 
 <script src="tet.js"></script>
