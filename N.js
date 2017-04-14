@@ -1,4 +1,11 @@
 //Mike
+
+function playerDeath()
+{
+	window.location.href = "GameState 03 - Game Over.html"
+}
+
+
 var questsHidden = true;
 var hotbarHidden = true;
 var minimapHidden = true;
@@ -198,9 +205,6 @@ function onKeyDown(event)
 				break;
         case 9: // ESC Key
            window.location.href = "GameState 02 - Game Menu.html"
-            	break;
-		case 72: // H Key
-           
             	break;
 		
     }
