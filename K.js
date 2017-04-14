@@ -60,3 +60,60 @@ function log(_total, _damage, _hitWidth){
     log.append("<div>"+_total+"</div>");
   }
 };
+
+
+$(document).ready(function(){
+	var useBtn = $('button.use'),
+         reset =  $ ('button.reset'), 
+         mBar = $ ('.mana-bar'), 
+         bar = mBar.find('.bar'), 
+         use = mBar.find('.use'); 
+
+    useBtn.on("click", function() {
+      var total = mBar.data('total')
+          value = mBar.data('value');
+		  
+	  if (value < 0) { 
+	       log("out of mana, reset"); 
+		   return; 
+	  }
+	  
+	  var use = Math.floor(Math.random()*total); 
+	  var newValue = value - damage; 
+	  var barWidth = (newValue / total) * 50; 
+	  var useWidth = (damage / value) * 50 + "%"; 
+	  
+	  use.css('width', useWidth); 
+	  mBar.data('value', newValue); 
+	  
+	  setTimeout(function() {
+		  use.css({'width': '0'}); 
+		  bar2.css('width', barWidth + "%"); 
+	  }, 200); 
+	  
+	  log(value, damamge, useWidth); 
+	  
+	  if( value < 0){
+		  log("OUT OF MAGIC. RESET"); 
+	  }
+	}); 
+	
+	reset.on('click', function(e) {
+		mBar.data('value', mBar.data('total')); 
+		
+		use.css({'width', '100%'); 
+		log("resetting mana to 500"); 
+		}); 
+	}); 
+	
+	function log(_total, _damage, _useWidth) {
+		var log = $('.log'); 
+		
+		if(_damage !== undefined && _useWidth !== undefined) {
+			log.append("<div>M:"+_total+" D:"+_damage+" W:"+_useWidth+" + (_total - _damage) + "</div>"); 
+		} else {
+			log.append("<div>"+_total+"</div>"); 
+		}
+	}; 
+	  
+		  
