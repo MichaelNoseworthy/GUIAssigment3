@@ -61,7 +61,7 @@ function log(_total, _damage, _hitWidth){
   }
 };
 
-
+/*
 $(document).ready(function(){
 	var useBtn = $('button.use'),
          reset =  $ ('button.reset'), 
@@ -116,4 +116,4 @@ $(document).ready(function(){
 		}
 	}; 
 	  
-		  
+		  */
