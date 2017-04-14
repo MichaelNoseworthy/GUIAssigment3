@@ -1,4 +1,10 @@
 //Mike
+var questsHidden = false;
+function hideQuests()
+{
+	
+
+}
 
 //ammo
 var ammo;
@@ -32,6 +38,7 @@ $(document).ready(function() {
     var wrapper         = $(".input_fields_wrap"); //Fields wrapper
     var add_button      = $(".add_field_button"); //Add button ID
 	var remove_button   = $(".remove_field_button"); //Remove button ID
+	var hide_button     = $(".hide_field_button");
     
     
     $(add_button).click(function(e){ //on add input button click
@@ -43,6 +50,19 @@ $(document).ready(function() {
         }
     });
     
+	$(hide_button).click(function(e){ //on add input button click
+        e.preventDefault();
+	if (questsHidden == false)
+	{
+		document.getElementById("Quests").removeAttribute("hidden");
+		questsHidden = true;
+	}
+	else if (questsHidden == true)
+	{
+		document.getElementById("Quests").setAttribute("hidden", "true");
+		questsHidden = false;
+	}
+		});
 	$(remove_button).click(function(e){ //on add input button click
         e.preventDefault();
         if(x == 1){ //max input box allowed
