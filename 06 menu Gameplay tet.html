@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>The Eldar Trolls</title>
+    <link rel="stylesheet" href="tet.css">
+</head>
+<style>
+body {
+    background-color: beige;
+}
+
+#MMtitle
+{
+	position: center;
+	text-align: center;
+}
+#button1
+{
+
+}
+#button2
+{
+
+}
+#button3
+{
+
+}
+#button4
+{
+
+}
+
+.buttonCenter
+{
+	
+}
+#title
+{
+	position: relative;
+    left: -300px;
+	text-align: center;
+	margin-top: auto;
+}
+
+.link-button-wrapper {
+    width: 800px;
+    height: 600px;
+    box-shadow: inset 0px 1px 0px 0px #ffffff;
+    border-radius: 4px;
+    background-color: #097BC0;
+    box-shadow: 0px 2px 4px gray;
+    display: block;
+    border:1px solid #094BC0;
+	margin-left: auto;
+    margin-right: auto;
+}
+.link-button-wrapper > a {
+    display: inline-table;
+    cursor: pointer;
+    text-decoration: none;
+    height: 100%;
+    width:100%;
+}
+.link-button-wrapper > a > h1 {
+    margin: 0 auto;
+    display: table-cell;
+    vertical-align: middle;
+    color: #f7f8f8;
+    font-size: 18px;
+    font-family: cabinregular;
+    text-align: center;
+}
+
+#Display
+{
+
+}
+
+#Resolution
+{
+
+}
+
+p
+{
+
+}
+#centered
+{
+	position: center;
+	text-align: center;
+}
+
+.vranger
+{
+	
+}
+
+a
+{
+
+}
+</style>
+
+<body>
+
+<div class="link-button-wrapper">
+<br>
+<br>
+<br>
+<p id="MMtitle">Gameplay Settings</p>
+<br>
+<br>
+<br>
+<div id="centered">
+<button id="button1" class="buttonType">Keybindings</button>
+<br>
+<br>
+<a id="Volume">100</a><a> </a><input id="volume" type="range" class="vranger" min="0" max="100" value="100" onchange="showValueVolume(this.value)"/><a> </a> <a>Mouse Sensitivity</a>
+<br>
+<br>
+<div class="buttonCenter">
+<button id="button1" class="buttonType" onclick="Defaults()">Defaults</button>
+<button id="button2" class="buttonType">Apply</button>
+<button id="button3" class="buttonType" onclick="window.location.href='05 menu Game Settings tet.html'">Exit</button>
+</div>
+
+</div>
+</div>
+
+</body>
+
+<script src="tet.js"></script>
+<script>
+function showValueVolume(newValue)
+{
+	document.getElementById("Volume").innerHTML=newValue;
+}
+
+function Defaults()
+{
+	document.getElementById("Volume").innerHTML="100";
+	document.getElementById('volume').value=100;
+
+}
+</script>
+</html>

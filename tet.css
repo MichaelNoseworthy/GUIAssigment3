@@ -1,0 +1,53 @@
+div
+{
+	border: none;
+}
+
+.buttonType
+{
+	font-family: Georgia, "Times New Roman", serif;
+	  font-size: 18px;
+	  color: #7FFF00;
+	  font-style: italic;
+	  font-weight: bold;
+} 
+.buttonType {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #FE8701;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.buttonType:hover {background-color: #3e8e41}
+
+.buttonType:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#MMtitle
+{
+	
+	font-family: Georgia, "Times New Roman", serif;
+	  font-size: 30px;
+	  color: #DF20E5;
+	  font-weight: bold;
+ 
+} 
+
+#title 
+{
+    font-family: Georgia, "Times New Roman", serif; 
+	  font-size: 30px; 
+	  color: #DF20E5; 
+	  font-style: italic; 
+} 

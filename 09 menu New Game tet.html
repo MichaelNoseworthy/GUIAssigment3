@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>The Eldar Trolls</title>
+    <link rel="stylesheet" href="tet.css">
+</head>
+
+<style>
+body {
+    background-color: beige;
+}
+
+.link-button-wrapper {
+    width: 800px;
+    height: 600px;
+    box-shadow: inset 0px 1px 0px 0px #ffffff;
+    border-radius: 4px;
+    background-color: #097BC0;
+    box-shadow: 0px 2px 4px gray;
+    display: block;
+    border:1px solid #094BC0;
+	margin-left: auto;
+    margin-right: auto;
+}
+.link-button-wrapper > a {
+    display: inline-table;
+    cursor: pointer;
+    text-decoration: none;
+    height: 100%;
+    width:100%;
+}
+.link-button-wrapper > a > h1 {
+    margin: 0 auto;
+    display: table-cell;
+    vertical-align: middle;
+    color: #f7f8f8;
+    font-size: 18px;
+    font-family: cabinregular;
+    text-align: center;
+}
+#race
+{
+	width: 100px;
+    height: 300px;
+	top: 60px;
+	left: 200px;
+	font-size: 15px;
+	flex: 0 0 20%;
+}
+#class
+{
+	left: 10px;
+	width: 100px;
+    height: 300px;
+	top: 60px;
+	left: 200px;
+	font-size: 15px;
+flex: 0 0 15%;
+}
+#innerbox
+{
+	width: 100px;
+    height: 100px;
+	border: solid;
+}
+#topbox
+{
+	width: 800px;
+    height: 130px;
+}
+#bottombox
+{
+	width: 800px;
+    height: 130px;
+}
+#wrapper {
+  display: flex;
+}
+#left {
+  flex: 0 0 65%;
+}
+#right {
+  flex: 1;
+}
+#buttondiv
+{
+	position: center;
+}
+#rightside
+{
+	width: 300px;
+    height: 350px;
+	flex: 0 0 15%;
+}
+#middle
+{
+	width: 200px;
+    height: 350px;
+
+}
+#infobox
+{
+	width: 200px;
+    height: 150px;
+	border: solid;
+}
+#middlebox
+{
+	position: relative;
+	left: 10px;
+	width: 150px;
+    height: 150px;
+	border: solid;
+}
+#gender
+{
+position: relative;
+	left: 50px;
+}
+</style>
+<body>
+	<div class="link-button-wrapper">
+
+<div id="topbox"></div>
+<button id="button1" class="buttonType" onclick="window.location.href='GameState 01 - Game State.html'">Start Game</button>
+<button id="button1" class="buttonType" onclick="window.location.href='03 menu Main tet.html'">Main Menu</button>
+<div id="wrapper">
+<div id="race">
+<div id="innerbox">Human</div>
+<div id="innerbox">Elf</div>
+<div id="innerbox">Orc</div>
+</div>
+<div id="class">
+<div id="innerbox">Warrior</div>
+<div id="innerbox">Mage</div>
+<div id="innerbox">Rogue</div>
+</div>
+<div id="middle">
+<div id="gender"><a>Gender: </a><form>
+               <select id = "Display">
+               <option value = "1">Male</option>
+               <option value = "2">Female</option>
+             </select> </div>
+
+<div id="middlebox"></div>
+</div>
+<div id="rightside">
+<div id="infobox"><a>statistical info about selection</a></div>
+<div id="infobox"><a>statistical info about selection</a></div>
+</div>
+</div>
+	<div id="bottombox">
+
+<a>Enter Player Name: </a> <input id="input1" type="text"></input>
+<br>
+<br>
+
+	</div>
+	</div>
+
+</div>
+</body>
+
+<script src="tet.js"></script>
+</html>

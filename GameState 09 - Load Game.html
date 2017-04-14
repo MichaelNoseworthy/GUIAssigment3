@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>The Eldar Trolls</title>
+	<link rel="stylesheet" href="tet.css">
+</head>
+<style>
+.vranger
+{
+	margin-top: 50px;
+	position: relative;
+	left: 300px;
+	top: -20px;
+	transform: rotate(270deg);
+	-moz-transform: rotate(270deg); /*do same for other browsers if required*/
+}
+body {
+    background-color: beige;
+}
+
+#MMtitle
+{
+	position: center;
+	text-align: center;
+}
+
+.link-button-wrapper {
+    width: 800px;
+    height: 600px;
+    box-shadow: inset 0px 1px 0px 0px #ffffff;
+    border-radius: 4px;
+    background-color: #097BC0;
+    box-shadow: 0px 2px 4px gray;
+    display: block;
+    border:1px solid #094BC0;
+	margin-left: auto;
+    margin-right: auto;
+}
+.link-button-wrapper > a {
+    display: inline-table;
+    cursor: pointer;
+    text-decoration: none;
+    height: 100%;
+    width:100%;
+}
+.link-button-wrapper > a > h1 {
+    margin: 0 auto;
+    display: table-cell;
+    vertical-align: middle;
+    color: #f7f8f8;
+    font-size: 18px;
+    font-family: cabinregular;
+    text-align: center;
+}
+
+#innerBox
+{
+	width: 400px;
+    height: 300px;
+	border-style: solid;
+}
+#wrapper {
+  display: flex;
+}
+#left {
+  flex: 0 0 65%;
+}
+#right {
+  flex: 1;
+}
+</style>
+
+<body>
+
+<div class="link-button-wrapper">
+
+<div id="MMtitle">
+<p>Saved Games</p>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div id="wrapper">
+<div id="left">
+<div id="innerBox" class="innerBoxC">
+<br>
+<div>
+<button id="Savebutton" class="buttonType" onclick="window.location.href='GameState 01 - Game State.html'">Save Game 1</button>
+<br>
+<br>
+<button id="Savebutton" class="buttonType" onclick="window.location.href='GameState 01 - Game State.html'">Save Game 2</button>
+<br>
+<br>
+<button id="Savebutton" class="buttonType" onclick="window.location.href='GameState 01 - Game State.html'">Save Game 3</button>
+</div>
+<input type="range" class="vranger"/>
+</div>
+</div>
+
+
+<div id="right">
+<div class="buttonCenter">
+<button id="button1" class="buttonType" onclick="window.location.href='GameState 01 - Game State.html'">Load Game</button>
+<br>
+<br>
+<button id="button2" class="buttonType">Delete Game</button>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<button id="button3" class="buttonType" onclick="window.location.href='GameState 01 - Game State.html'">Exit</button>
+</div>
+</div>
+</div>
+
+</div>
+
+
+
+</body>
+
+<script src="tet.js"></script>
+</html>

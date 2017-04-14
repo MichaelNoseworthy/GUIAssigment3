@@ -4,8 +4,36 @@ function playerDeath()
 {
 	window.location.href = "GameState 03 - Game Over.html"
 }
+var underwater = true;
+function underWaterOxygen()
+{
+	if (underwater == false)
+	{
+		document.getElementById("oxygenbar").removeAttribute("hidden");
+		underwater = true;
+	}
+	else if (underwater == true)
+	{
+		document.getElementById("oxygenbar").setAttribute("hidden", "true");
+		underwater = false;
+	}
+}
+enemybar
 
-
+var enemySighted = true;
+function sightedEnemy()
+{
+	if (enemySighted == false)
+	{
+		document.getElementById("enemybar").removeAttribute("hidden");
+		enemySighted = true;
+	}
+	else if (enemySighted == true)
+	{
+		document.getElementById("enemybar").setAttribute("hidden", "true");
+		enemySighted = false;
+	}
+}
 var questsHidden = true;
 var hotbarHidden = true;
 var minimapHidden = true;
@@ -20,6 +48,16 @@ function setammo(ammoset)
 	if (ammoset > 0)
 	{
 	ammo = ammoset
+	document.getElementById("ammo").innerHTML = "Ammo: " + ammo;
+	}
+	else
+		console.log("Invalid Input");
+}
+function addammo(ammoset)
+{
+	if (ammoset > 0)
+	{
+	ammo += ammoset
 	document.getElementById("ammo").innerHTML = "Ammo: " + ammo;
 	}
 	else

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>The Eldar Trolls</title>
+    <link rel="stylesheet" href="tet.css">
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<style>
+body {
+    background-color: beige;
+}
+div
+{
+	border: none;
+}
+
+.link-button-wrapper {
+    width: 800px;
+    height: 600px;
+    box-shadow: inset 0px 1px 0px 0px #ffffff;
+    border-radius: 4px;
+    background-color: #097BC0;
+    box-shadow: 0px 2px 4px gray;
+    display: block;
+    border:1px solid #094BC0;
+	margin-left: auto;
+    margin-right: auto;
+}
+.link-button-wrapper > a {
+    display: inline-table;
+    cursor: pointer;
+    text-decoration: none;
+    height: 100%;
+    width:100%;
+}
+.link-button-wrapper > a > h1 {
+    margin: 0 auto;
+    display: table-cell;
+    vertical-align: middle;
+    color: #f7f8f8;
+    font-size: 18px;
+    font-family: cabinregular;
+    text-align: center;
+}
+
+.health-bar {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 200px;
+  height: 20px;
+  padding: 5px;
+  background: #ddd;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  position: relative;
+}
+.bar {
+  background: #c54;
+  width: 100%;
+  height: 10px;
+  position: relative;
+  
+  transition: width .5s linear;
+}
+
+.hit {
+  background: rgba(255,255,255,0.6);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 0px;
+  
+  transition: width .5s linear;
+}
+
+#race
+{
+	width: 100px;
+    height: 300px;
+	top: 60px;
+	left: 200px;
+	font-size: 15px;
+	flex: 0 0 20%;
+}
+#class
+{
+	left: 10px;
+	width: 100px;
+    height: 300px;
+	top: 60px;
+	left: 200px;
+	font-size: 15px;
+flex: 0 0 15%;
+}
+#innerbox
+{
+	width: 100px;
+    height: 100px;
+	border: solid;
+}
+#topbox
+{
+	width: 800px;
+    height: 130px;
+}
+#bottombox
+{
+	width: 800px;
+    height: 130px;
+}
+#wrapper {
+  display: flex;
+}
+#left {
+  flex: 0 0 65%;
+}
+#right {
+  flex: 1;
+}
+#buttondiv
+{
+	position: center;
+}
+#rightside
+{
+	width: 300px;
+    height: 350px;
+	flex: 0 0 15%;
+}
+#middle
+{
+	width: 200px;
+    height: 350px;
+
+}
+#infobox
+{
+	width: 200px;
+    height: 150px;
+	border: solid;
+}
+#middlebox
+{
+	position: relative;
+	left: 10px;
+	width: 150px;
+    height: 150px;
+	border: solid;
+}
+#gender
+{
+position: relative;
+	left: 50px;
+}
+</style>
+<body>
+	<div class="link-button-wrapper">
+
+<div id="topbox"></div>
+
+<div id="wrapper">
+<div id="race">
+<div id="innerbox">
+<input type="checkbox" name="subtitles" value="subtitles" />Quest tracking<br /></div>
+<div class="input_fields_wrap">
+    <button class="add_field_button">Add More Quests</button>
+	<button class="remove_field_button">Remove Quests</button>
+</div>
+
+<div id="boolhidden1">
+<div id="innerbox">Quest 1</div>
+<div id="innerbox">Quest 2</div>
+<div id="innerbox">Quest 3</div>
+</div>
+</div>
+<div id="class">
+
+</div>
+<div id="middle">
+<div id="gender"> </div>
+
+<div id="middlebox"></div>
+</div>
+<div id="rightside">
+<div id="infobox"><a></a></div>
+<div id="infobox"><a></a></div>
+</div>
+</div>
+	<div id="bottombox">
+
+<a>Enter Player Name: </a> <input id="input1" type="text"></input>
+<br>
+<br>
+
+	</div>
+	</div>
+	
+	
+  <div class="health-bar" data-total="1000" data-value="1000">
+  <div class="bar">
+  	  <div class="hit"></div>
+  </div>
+</div>
+
+<br />
+
+<button class="damage random">hit random</button>
+<button class="reset">reset</button>
+
+<div class="log">
+ <div>What's going on...</div>
+
+</div>
+
+</div>
+</body>
+
+<script>
+
+//Mike
+var x = 0; //initlal text box count
+$(document).ready(function() {
+    var max_fields      = 5; //maximum input boxes allowed
+    var wrapper         = $(".input_fields_wrap"); //Fields wrapper
+    var add_button      = $(".add_field_button"); //Add button ID
+	var remove_button   = $(".remove_field_button"); //Remove button ID
+    
+    
+    $(add_button).click(function(e){ //on add input button click
+        e.preventDefault();
+        if(x < max_fields){ //max input box allowed
+            x++; //text box increment
+            //$(wrapper).append('<div><input type="text" name="mytext[]"/><a href="#" class="remove_field">Remove</a></div>'); //add input box
+			$(wrapper).append(addquests()); //add input box
+        }
+    });
+    
+	$(remove_button).click(function(e){ //on add input button click
+        e.preventDefault();
+        if(x == 1){ //max input box allowed
+			{
+				$('#quest1').remove();
+				x--; //text box deincrement
+            }
+        }
+		if(x == 2){ //max input box allowed
+			{
+				$('#quest2').remove();
+				x--; //text box deincrement
+            }
+        }
+		if(x == 3){ //max input box allowed
+			{
+				$('#quest3').remove();
+				x--; //text box deincrement
+            }
+        }
+		if(x == 4){ //max input box allowed
+			{
+				$('#quest4').remove();
+				x--; //text box deincrement
+            }
+        }
+		if(x == 5){ //max input box allowed
+			{
+				$('#quest5').remove();
+				x--; //text box deincrement
+            }
+        }
+    });
+	
+    $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
+        //e.preventDefault(); $(this).parent('div').remove(); x--;
+		e.preventDefault(); $('test').remove(); x--;
+    })
+});
+function addquests()
+{
+	var addquests = '<div><input type="text" name="mytext[]"/><a href="#" class="remove_field">Remove</a></div>';
+	if (x  < 6)
+	{
+	if (x == 1)
+	addquests = '<div id="quest1">Quest 1</div>';
+	if (x == 2)
+	addquests = '<div id="quest2">Quest 2';
+	if (x == 3)
+	addquests = '<div id="quest3">Quest 3';
+	if (x == 4)
+	addquests = '<div id="quest4">Quest 4';
+	if (x == 5)
+	addquests = '<div id="quest5">Quest 5';
+	
+	return addquests;
+	}
+}
+//Mike End
+
+//Madalyn
+$(document).ready(function(){
+  var hitBtn = $('button.damage'),
+      reset = $('button.reset'),
+      hBar = $('.health-bar'),
+      bar = hBar.find('.bar'),
+      hit = hBar.find('.hit');
+  
+  hitBtn.on("click", function(){
+    var total = hBar.data('total'),
+        value = hBar.data('value');
+    
+    if (value < 0) {
+			log("you dead, reset");
+      return;
+    }
+    // max damage is essentially quarter of max life
+    var damage = Math.floor(Math.random()*total);
+    // damage = 100;
+    var newValue = value - damage;
+    // calculate the percentage of the total width
+    var barWidth = (newValue / total) * 100;
+    var hitWidth = (damage / value) * 100 + "%";
+    
+    // show hit bar and set the width
+    hit.css('width', hitWidth);
+    hBar.data('value', newValue);
+    
+    setTimeout(function(){
+      hit.css({'width': '0'});
+      bar.css('width', barWidth + "%");
+    }, 500);
+    //bar.css('width', total - value);
+    
+    log(value, damage, hitWidth);
+    
+    if( value < 0){
+      log("DEAD");
+    }
+  });
+  
+  reset.on('click', function(e){
+    hBar.data('value', hBar.data('total'));
+    
+    hit.css({'width': '0'});
+    
+		bar.css('width', '100%');
+		log("resetting health to 1000");
+  });
+});
+
+
+
+function log(_total, _damage, _hitWidth){
+  var log = $('.log');
+  
+  if(_damage !== undefined && _hitWidth !== undefined) {
+	  log.append("<div>H:"+_total+" D:"+_damage+" W:"+_hitWidth+" = " + (_total - _damage) + "</div>");
+  } else {
+    log.append("<div>"+_total+"</div>");
+  }
+};
+</script>
+</html>

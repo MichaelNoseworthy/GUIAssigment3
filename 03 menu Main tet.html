@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>The Eldar Trolls</title>
+    <link rel="stylesheet" href="tet.css">
+</head>
+<style>
+body {
+    background-color: beige;
+}
+.buttonType {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #FE8701;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+.buttonType:hover {background-color: #3e8e41}
+.buttonType:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+#MMtitle
+{
+	position: center;
+	text-align: center;
+	
+}
+#button1
+{
+	position: center;
+    left: 500px;
+    top: 270px;
+    z-index: 1;
+	
+}
+#button2
+{
+	position: center;
+    left: 500px;
+    top: 300px;
+    z-index: 1;
+	
+}
+#button3
+{
+	position: center;
+    left: 500px;
+    top: 330px;
+    z-index: 1;
+	
+}
+#button4
+{
+	position: center;
+    left: 500px;
+    top: 360px;
+    z-index: 1;
+	
+}
+.buttonCenter
+{
+}
+#title
+{
+	position: absolute;
+	left: 300px;
+    top: 260px;
+	text-align: center;
+	margin-top: auto;
+	font-size: 30px; 
+	  color: #DF20E5; 
+	  font-style: italic;
+	
+}
+.link-button-wrapper {
+    width: 800px;
+    height: 600px;
+    box-shadow: inset 0px 1px 0px 0px #ffffff;
+    border-radius: 4px;
+    background-color: #097BC0;
+    box-shadow: 0px 2px 4px gray;
+    display: block;
+    border:1px solid #094BC0;
+	margin-left: auto;
+    margin-right: auto;
+}
+.link-button-wrapper > a {
+    display: inline-table;
+    cursor: pointer;
+    text-decoration: none;
+    height: 100%;
+    width:100%;
+}
+.link-button-wrapper > a > h1 {
+    margin: 0 auto;
+    display: table-cell;
+    vertical-align: middle;
+    color: #f7f8f8;
+    font-size: 18px;
+    font-family: cabinregular;
+    text-align: center;
+}
+#wrapper {
+  display: flex;
+}
+#left {
+  flex: 0 0 65%;
+}
+#right {
+  flex: 1;
+}
+#innerBox
+{
+	position: relative;
+	width: 200px;
+    height: 200px;
+	top: 60px;
+	left: 200px;
+	font-size: 60px;
+	color: #006400; 
+	font-style: italic;
+}
+.innerBoxC
+{
+	
+}
+</style>
+
+<body>
+
+<div class="link-button-wrapper">
+
+<br>
+<br>
+<br>
+<p id="MMtitle">Main Menu</p>
+<br>
+<br>
+<br>
+<div id="wrapper">
+<div id="left">
+<div id="innerBox" class="innerBoxC">
+<a>The</a><br>
+<a>Eldar</a><br>
+<a>Trolls</a>
+</div>
+</div>
+<div id="right">
+<div class="buttonCenter">
+<button id="button1" class="buttonType" onclick="window.location.href='09 menu New Game tet.html'">New Game</button>
+<br>
+<br>
+<br>
+<button id="button2" class="buttonType" onclick="window.location.href='04 menu Load Game tet.html'">Load Game</button>
+<br>
+<br>
+<br>
+<button id="button3" class="buttonType" onclick="window.location.href='05 menu Game Settings tet.html'">Game Settings</button>
+<br>
+<br>
+<br>
+<button id="button4" class="buttonType" onclick="window.location.href='exit.html'">Exit Game</button>
+</div>
+</div>
+</div>
+
+</body>
+
+<script src="tet.js"></script>
+</html>
