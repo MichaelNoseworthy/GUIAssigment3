@@ -293,6 +293,7 @@ position: relative;
 {
 	position: relative;
 	width: 200px;
+	height: 20px;
 	left: 20px;
 	border: solid;
 }
