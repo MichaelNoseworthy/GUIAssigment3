@@ -100,42 +100,6 @@ div
  	
  	transition: width .5s linear; 
  } 
- 
- .oxygen-bar {
-	-webkit-box-sizing: border-box; 
- 	-moz-box-sizing: border-box; 
- 	box-sizing: border-box; 
- 	width: 200px;
- 	height: 20px;
- 	padding: 5px;
-	background: #ddd; 
-     -webkit-border-radius: 5px;
-     -moz-border-radius: 5px; 
-     border-radius: 5px; 
-     position: center; 
- }
- 
- .bar3 {
-	 background: #FFD700
-	  width: 100%;
- height: 10px; 
- position: center: 
- 
- transition: width .5s linear; 
- }
- 
- .breathe {
-	 background: rgba(255,255,255,0.6);
- 	position: center; 
- 	top: 0;
- 	right: 0;
- 	bottom: ;
- 	width: 0px; 
- 	
- 	transition: width .5s linear; 
- } 
-	
-	
 #race
 {
 	width: 100px;
@@ -298,7 +262,7 @@ flex: 0 0 15%;
 	position: relative;
 	width: 200px;
     height: 40px;
-
+	left: 20px;
 	border: none;
 }
 #enhot
@@ -317,11 +281,11 @@ position: relative;
 }
 #middleflex
 {
-	flex: 0 0 15%;
+	flex: 0 0 10%;
 }
 #image
 {
 	position: relative;
-	left: 50px;
+	left: 30px;
 	top: 50px;
 }
